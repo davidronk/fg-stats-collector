@@ -1,0 +1,38 @@
+-- phpMyAdmin SQL Dump
+-- version 2.6.4-pl3
+-- http://www.phpmyadmin.net
+-- 
+-- Host: db463716895.db.1and1.com
+-- Generation Time: Mar 28, 2013 at 03:08 PM
+-- Server version: 5.1.67
+-- PHP Version: 5.3.3-7+squeeze15
+-- 
+-- Database: `db463716895`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `stats`
+-- 
+
+CREATE TABLE `stats` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `character` varchar(50) COLLATE latin1_general_ci NOT NULL,
+  `scan_datetime` datetime NOT NULL,
+  `level` int(11) NOT NULL,
+  `deaths` int(11) NOT NULL,
+  `kills` int(11) NOT NULL,
+  `quests_completed` int(11) NOT NULL,
+  `button_clicks` int(11) NOT NULL,
+  `best_kill_streak` int(11) NOT NULL,
+  `best_travel_streak` int(11) NOT NULL,
+  `longest_slow_death` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `character_scan_datetime_IX` (`character`,`scan_datetime`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=1 ;
+
+-- 
+-- Dumping data for table `stats`
+-- 
+
